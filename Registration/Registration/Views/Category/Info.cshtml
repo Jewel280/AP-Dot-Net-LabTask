@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Info";
+}
+
+<h2>Add Product to Category</h2>
+<form method="post" action="/registration/register">
+    <input type="text" class="form-control" placeholder="Prduct Id" />
+           @foreach (var c in ViewBag.ProductCategory)
+            {
+                <input type="checkbox" value="c.Id" name="ProductCategory[]" /> @c.Name <b>@ProductCategory.Count 0/100</b>
+            }
+            <input type="submit" class="btn-btn-danger" value="Confirm" />
+</form>
+
